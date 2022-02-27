@@ -1,11 +1,17 @@
-import './App.css';
+// import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Login from './pages/Login';
+import Movie from './pages/Movie';
+import Search from './pages/Search';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      
-    </div>
+    <Routes>
+    <Route path="/" element={<Login />}/>
+    <Route path="/search" element={<Search />}/>
+    <Route path="/movie" element={<Movie />} />
+   
+  </Routes>
+  
   );
 }
-
-export default App;

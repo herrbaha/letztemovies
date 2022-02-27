@@ -1,0 +1,11 @@
+.Login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+
+}
+.login-btn {
+    background-color: #fff;
+    margin: 1rem 4rem;
+}
