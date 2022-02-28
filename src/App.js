@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import Login from './pages/Login';
-import Search from './pages/Search';
+import Login from './components/Login';
+import Search from './components/Search';
 
 export default function App() {
   return (
