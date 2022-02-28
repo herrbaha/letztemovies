@@ -24,51 +24,8 @@ const Login = () => {
 
   return (
     <div className="Login">
-      {/* <Form onSubmit={handleSubmit}>
 
-      <Form.Group size="lg" controlId="email">
-
-        <Form.Label>Email</Form.Label>
-
-        <Form.Control
-
-          autoFocus
-
-          type="email"
-
-          value={email}
-
-          onChange={(e) => setEmail(e.target.value)}
-
-        />
-
-      </Form.Group>
-
-      <Form.Group size="lg" controlId="password">
-
-        <Form.Label>Password</Form.Label>
-
-        <Form.Control
-
-          type="password"
-
-          value={password}
-
-          onChange={(e) => setPassword(e.target.value)}
-
-        />
-
-      </Form.Group>
-
-      <Button block size="lg" type="submit" className="login-btn" disabled={!validateForm()}>
-
-      <Link to="/search">Login</Link>
-
-      </Button>
-
-    </Form> */}
-
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} className="Login">
         
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
@@ -79,9 +36,6 @@ const Login = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -93,12 +47,9 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group> */}
         
         <Link to="/search"><Button
-          variant="primary"
+          variant="light"
           type="submit"
           className="login-btn"
           disabled={!validateForm()}
