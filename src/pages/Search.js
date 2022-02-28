@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
-import "./search.css";
+import { useState} from "react";
+import "../css/search.css";
 import Movie from "./Movie";
 
-const FEATURED_API =
-  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=63da3278ddb6c0a829bb2d4a2c1d118a&page=1&language=tr";
+// const FEATURED_API =
+//   "https://api.themoviedb.org/3/discover/movie?api_key=63da3278ddb6c0a829bb2d4a2c1d118a&page=1&language=tr";
 const SEARCH_API =
   "https://api.themoviedb.org/3/search/movie?language=tr&api_key=63da3278ddb6c0a829bb2d4a2c1d118a&query=";
 
@@ -11,14 +11,14 @@ function Search() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    fetch(FEATURED_API)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setMovies(data.results);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch(FEATURED_API)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       setMovies(data.results);
+  //     });
+  // }, []);
 
   const handleOnSubmit = (e) => {
       e.preventDefault();
@@ -38,13 +38,15 @@ function Search() {
   return (
     <div className="movie-container">
       <header>
-        <form onSubmit={handleOnSubmit}>
+        <form onSubmit={handleOnSubmit} className="search-form">
           <input 
           type="text" 
           placeholder="Seach..." 
           className="search"
           value={searchTerm}
           onChange={handleOnChange} />
+           <button type="submit" className="search-btn">Search
+          </button>
         </form>
       </header>
       {movies.length > 0 &&
