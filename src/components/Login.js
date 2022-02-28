@@ -13,24 +13,20 @@ const Login = () => {
     return email.length > 9 && password.length > 6;
   }
 
-  
   const history = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
     localStorage.setItem("password", password);
     localStorage.setItem("email", email);
-    history('/search');
+    history("/search");
     setPassword("");
     setEmail("");
-   
   }
 
   return (
     <div className="Login">
-
       <Form onSubmit={handleSubmit} className="Login">
-        
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
@@ -51,11 +47,9 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Group>
-        <Button
-          type="submit"
-          className="login-btn"
-          disabled={!validateForm()}
-        >Login</Button>
+        <Button type="submit" className="login-btn" disabled={!validateForm()}>
+          Login
+        </Button>
       </Form>
     </div>
   );
