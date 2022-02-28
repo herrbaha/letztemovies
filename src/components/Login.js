@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../css/login.css";
@@ -13,12 +13,16 @@ const Login = () => {
     return email.length > 9 && password.length > 6;
   }
 
+  
+  const history = useNavigate();
+
   function handleSubmit(e) {
     e.preventDefault();
     localStorage.setItem("password", password);
     localStorage.setItem("email", email);
-    // setPassword("");
-    // setEmail("");
+    history('/search');
+    setPassword("");
+    setEmail("");
    
   }
 
@@ -51,8 +55,7 @@ const Login = () => {
           type="submit"
           className="login-btn"
           disabled={!validateForm()}
-        ><Link to="/search" >Login</Link></Button>
-        
+        >Login</Button>
       </Form>
     </div>
   );
