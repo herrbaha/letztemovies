@@ -40,11 +40,12 @@ header{
 }
 .search-btn{
     border-radius: 0.5rem;
-    background-color: #fff;
+    background-color: #22254b;
     padding: 0.5rem;
-    color:black;
+    color: white;
     margin-top: 0.5rem;
     text-decoration: none;
+    border: none;
 }
 .movie-container{
     display: flex;

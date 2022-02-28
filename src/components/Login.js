@@ -48,8 +48,7 @@ const Login = () => {
           />
         </Form.Group>
         
-        <Link to="/search"><Button
-          variant="light"
+        <Link to="/search" ><Button
           type="submit"
           className="login-btn"
           disabled={!validateForm()}
