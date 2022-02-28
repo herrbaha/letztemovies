@@ -60,7 +60,7 @@ header{
     position: relative;
     margin: 1rem;
     width: 20rem;
-    height:26rem;
+    height:24rem;
     /* z-index: -1; */
 }
 .movie img{
@@ -75,7 +75,7 @@ header{
     display: flex;
     align-items: center;
     justify-content:space-between;
-    padding: 1rem;
+    padding: 0.5rem;
 }
 .movie-info h3{
     margin: 0;

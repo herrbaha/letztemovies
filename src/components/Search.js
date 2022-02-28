@@ -5,7 +5,7 @@ import Movie from "./Movie";
 // const FEATURED_API =
 //   "https://api.themoviedb.org/3/discover/movie?api_key=63da3278ddb6c0a829bb2d4a2c1d118a&page=1&language=tr";
 const SEARCH_API =
-  "https://api.themoviedb.org/3/search/movie?language=tr&api_key=63da3278ddb6c0a829bb2d4a2c1d118a&query=";
+  "https://api.themoviedb.org/3/search/movie?api_key=63da3278ddb6c0a829bb2d4a2c1d118a&query=";
 
 function Search() {
   const [movies, setMovies] = useState([]);
