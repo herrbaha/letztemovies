@@ -12,27 +12,30 @@
 // }
 import {
   Route,
-  Redirect
+  Redirect, BrowserRouter, useAuth
 } from 'react-router-dom';
+import Login from "./components/Login";
+import Search from "./components/Search";
 
-function App({ search, isAuthenticated }) {
+function PrivateRoute({ children, ...rest }) {
+  let auth = useAuth();
   return (
     <Route
-      render={
-        ({ password, email }) => (
-          isAuthenticated
-            ? (
-              search
-            ) : (
-              <Redirect
-                to={{
-                  pathname: '/login',
-                  state: { from: password, email }
-                }}
-              />
-            ))
+      {...rest}
+      render={() => auth
+        ? children
+        : <Redirect to="/login" />
       }
     />
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Route path="/" element={<Login />}></Route>
+      <PrivateRoute path="/search" element={<Search />} />
+    </BrowserRouter>
   );
 }
 
