@@ -15,12 +15,11 @@ import {
   Redirect
 } from 'react-router-dom';
 
-function App({ search, isAuthenticated, ...rest }) {
+function App({ search, isAuthenticated }) {
   return (
     <Route
-      {...rest}
       render={
-        ({ location }) => (
+        ({ password, email }) => (
           isAuthenticated
             ? (
               search
@@ -28,7 +27,7 @@ function App({ search, isAuthenticated, ...rest }) {
               <Redirect
                 to={{
                   pathname: '/login',
-                  state: { from: location }
+                  state: { from: password, email }
                 }}
               />
             ))
