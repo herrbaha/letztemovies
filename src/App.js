@@ -3,9 +3,14 @@ import Login from "./components/Login";
 import Search from "./components/Search";
 
 export default function App() {
+
+  const PrivateRoute = ({ auth: { isAuthenticated }, children }) => {
+    return isAuthenticated ? children : <Navigate to="/login" />;
+  }; 
+
   return (
     <Routes>
-      <Route path="/" element={<Login />}></Route>
+      <Route path="/login" element={<PrivateRoute ><Login /></PrivateRoute>}></Route>
       <Route path="/search" element={<Search />} />
     </Routes>
   );
