@@ -10,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   function validateForm() {
-    return email.length > 9 && password.length > 6;
+    return  password.length > 6;
   }
 
   const history = useNavigate();
