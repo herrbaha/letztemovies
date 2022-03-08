@@ -1,16 +1,29 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/Login";
 import Search from "./components/Search";
 
 export default function App() {
 
-  const PrivateRoute = ({ auth: { isAuthenticated }, children }) => {
-    return isAuthenticated ? children : <Navigate to="/login" />;
-  }; 
+  const PrivateRoute = ({ children}) => {
+    const isAuthenticated = true;
+        
+    if (isAuthenticated ) {
+      return children
+    }
+      
+    return <Navigate to="/" />
+  }
 
   return (
     <Routes>
-      <Route path="/login" element={<PrivateRoute ><Login /></PrivateRoute>}></Route>
+      <Route
+          path="/"
+          element={
+            <PrivateRoute>
+              <Login />
+            </PrivateRoute>
+          }
+        />
       <Route path="/search" element={<Search />} />
     </Routes>
   );
