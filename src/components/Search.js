@@ -30,6 +30,7 @@ function Search() {
         <form onSubmit={handleOnSubmit} className="search-form">
           <input
             type="text"
+            autoFocus
             placeholder="Seach..."
             className="search"
             value={searchTerm}
