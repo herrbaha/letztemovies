@@ -1,31 +1,32 @@
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route, Navigate, BrowserRouter} from "react-router-dom";
 import Login from "./components/Login";
 import Search from "./components/Search";
 
+const PrivateRoute = ({ children }) => {
+  const password =  localStorage.getItem("password");
+  const email =  localStorage.getItem("email");
+  
+      
+  if ( password && email ) {
+    return  children
+  }
+    return <Navigate to="/" />
+
+}
+
 export default function App() {
 
-  // const PrivateRoute = ({ children}) => {
-  //   const isAuthenticated = true;
-        
-  //   if (isAuthenticated ) {
-  //     return children
-  //   }
-      
-  //   return <Navigate to="/" />
-  // }
+ 
+
+
 
   return (
+    <BrowserRouter>
     <Routes>
-      {/* <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <Login />
-            </PrivateRoute>
-          }/> */}
       
-          <Route path="/" element={<Login />} />
-      <Route path="/search" element={<Search />} />
+      <Route path="/" element={<Login />} />
+      {/* <Route path="/search" element={<PrivateRoute><Search /></PrivateRoute>}/> */}
     </Routes>
+    </BrowserRouter>
   );
 }
