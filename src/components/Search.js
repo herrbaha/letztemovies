@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import "../css/search.css";
 import Movie from "./Movie";
 
@@ -8,6 +8,14 @@ const SEARCH_API =
 function Search() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    return () => {
+      localStorage.removeItem("password");
+      localStorage.removeItem("email");
+      // window.localStorage.clear();
+    };
+  }, []);
 
   function handleOnSubmit(e) {
     e.preventDefault();
