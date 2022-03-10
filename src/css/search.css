@@ -16,8 +16,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
-    /* position:fixed; */
-    /* z-index: 1; */
+   
 
 }
 .search{
@@ -61,15 +60,11 @@ header{
     margin: 1rem;
     width: 20rem;
     height:24rem;
-    /* z-index: -1; */
 }
 .movie img{
     width: 100%;
     height:85%;
-    /* margin: 1rem 2rem; */
-    /* height:400px; */
-    /* object-fit: cover; */
-    /* border-radius: 0.5rem 0.5rem 0 0; */
+  
 }
 .movie-info{
     display: flex;
