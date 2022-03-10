@@ -1,4 +1,4 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import "../css/search.css";
 import Movie from "./Movie";
 
