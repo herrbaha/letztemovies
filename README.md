@@ -2,6 +2,8 @@
 
 You can open the application here with (https://moviebaha.netlify.app/).
 
+Sie benötigen eine E-Mail-Adresse und ein mindestens 7-stelliges Passwort, um sich zu loginen.
+
 ## Available Scripts
 
 In the project directory, you can run:
