@@ -2,7 +2,7 @@
 
 You can open the application here with (https://moviebaha.netlify.app/).
 
-Sie benötigen eine mindestens 9-stellige E-Mail-Adresse und ein mindestens 7-stelliges Passwort, um sich zu loginen.
+Sie benötigen eine mindestens 9-stellige E-Mail-Adresse und ein mindestens 7-stelliges Passwort, um sich einzuloggen.
 
 ## Available Scripts
 
