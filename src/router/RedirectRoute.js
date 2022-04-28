@@ -1,5 +1,7 @@
 import { Navigate } from "react-router-dom";
+
 const RedirectRoute = () => {
+  
   const password = localStorage.getItem("password");
   const email = localStorage.getItem("email");
 
