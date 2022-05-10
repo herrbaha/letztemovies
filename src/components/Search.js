@@ -11,8 +11,9 @@ function Search() {
 
   useEffect(() => {
     return () => {
-      window.sessionStorage.removeItem("password");
-      window.sessionStorage.removeItem("email");
+      localStorage.removeItem("password");
+      localStorage.removeItem("email");
+      window.localStorage.clear()
     };
   }, []);
 
