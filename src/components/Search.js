@@ -13,7 +13,6 @@ function Search() {
     return () => {
       localStorage.removeItem("password");
       localStorage.removeItem("email");
-      window.localStorage.clear()
     };
   }, []);
 
