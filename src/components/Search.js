@@ -16,6 +16,11 @@ function Search() {
     };
   }, []);
 
+  window.onbeforeunload = () => {
+  localStorage.removeItem("password","email");
+}
+
+
   function handleOnSubmit(e) {
     e.preventDefault();
     fetch(SEARCH_API + searchTerm)
