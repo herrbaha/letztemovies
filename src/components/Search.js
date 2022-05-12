@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import "../css/search.css";
 import Movie from "./Movie";
 
@@ -9,12 +9,12 @@ function Search() {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
+ /* useEffect(() => {
     return () => {
       localStorage.removeItem("password");
       localStorage.removeItem("email");
     };
-  }, []);
+  }, []); */
 
   window.onbeforeunload = () => {
   localStorage.removeItem("password","email");
